@@ -42,12 +42,11 @@ setPins(res.data)
     getPins()
    },[]);
 
-   const handleMarkerClick = (id,lat,long)=>{
+   const handleMarkerClick = (id, lat, long) => {
     if(currentUsername!=null){
     setCurrentPlaceId(id);
-
-    setViewport({ ...viewport, latitude:lat, longitude:long });
-   }
+    setViewport({ ...viewport, latitude: lat, longitude: long });
+    }
   };
   
    const handleAddClick = (e) => {
@@ -95,17 +94,27 @@ setPins(res.data)
 
   return (
     <div className="App">
+      
+     <div style={{height:"100",backgroundColor:"black",color:"black"}} >user</div>
+      <div style={{height:"100",backgroundColor:"black",color:"black"}} >user</div>
+       
+
       <Map
-   
-     
+
+      
+
+       
         mapboxAccessToken={process.env.REACT_APP_MAPBOX}
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: "99.8vw",
+          height: "92.7vh",
+         
           borderRadius: "15px",
           border: "2px solid green",
           
         }}
+   
+
         initialViewState={{
           longitude:viewport.longitude,
           latitude: viewport.latitude,
@@ -115,9 +124,14 @@ setPins(res.data)
       
 
         mapStyle="mapbox://styles/mapbox/streets-v9"
+       
+
       onDblClick={ handleAddClick}
       
       >
+      
+  
+
         {pins.map(p=>(
     <>
         <Marker 
@@ -215,11 +229,21 @@ setPins(res.data)
        </Popup> 
        </>
        )}
+     
 
-{currentUsername ? (
+
+       <NavigationControl position="bottom-right" />
+        <FullscreenControl position="bottom-left"/>
+        <GeolocateControl  position="top-left"/>
+      </Map>
+
+      <div>
+      {currentUsername ? (
+   
           <button className="button logout"onClick={handleLogout}>
             Log out
           </button>
+
         ) : (
           <div className="buttons">
             <button className="button login" onClick={() => setShowLogin(true)}>
@@ -243,10 +267,8 @@ setPins(res.data)
              setCurrentUsername={setCurrentUsername}
           />
         )}
-       <NavigationControl position="bottom-right" />
-        <FullscreenControl position="bottom-left"/>
-        <GeolocateControl  position="top-left"/>
-      </Map>
+        </div>
+
     </div>
   );
 }
