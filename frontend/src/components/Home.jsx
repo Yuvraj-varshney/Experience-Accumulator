@@ -95,8 +95,9 @@ setPins(res.data)
   return (
     <div className="App">
       
-     <div style={{height:"100",backgroundColor:"black",color:"black"}} >user</div>
-      <div style={{height:"100",backgroundColor:"black",color:"black"}} >user</div>
+     <div style={{height:"65",backgroundColor:"black",color:"black"}} >user</div>
+     <div style={{height:"65",backgroundColor:"black",color:"white",fontFamily:"cursive"}} >Experience-Accumulator</div>
+      <div style={{height:"65",backgroundColor:"black",color:"black"}} >user</div>
        
 
       <Map
@@ -106,8 +107,8 @@ setPins(res.data)
        
         mapboxAccessToken={process.env.REACT_APP_MAPBOX}
         style={{
-          width: "99.8vw",
-          height: "92.7vh",
+          width: "99.7vw",
+          height: "90vh",
          
           borderRadius: "15px",
           border: "2px solid green",

@@ -37,13 +37,13 @@ export default function Login({ setShowLogin,myStorage,setCurrentUsername}) {
     <div className="loginContainer">
       <div className="logo">
         <Room className="logoIcon" />
-        <span>MAPMARKER</span>
+        <span>Experience-Accumulator</span>
       </div>
       <form onSubmit={handleSubmit}>
         <input style={{marginTop:30}} placeholder="username" ref={usernameRef} />
         <input
-          // type="password"
-          // min="6"
+          type="password"
+          min="6"
           
          placeholder="password"
           ref={passwordRef}
@@ -51,7 +51,7 @@ export default function Login({ setShowLogin,myStorage,setCurrentUsername}) {
         <button className="loginBtn" >
           Login
         </button>
-        {error && <span className="failure">Something went wrong!</span>}
+        {error && <span className="failure">wrong username or password!</span>}
       </form>
       <Cancel className="loginCancel" onClick={() => setShowLogin(false)} />
     </div>

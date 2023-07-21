@@ -29,7 +29,7 @@ import axios from "axios";
     <div className="registerContainer"> 
       <div className="logo">
         <Room/>
-        MAPMARKER
+        Experience-Accumulator
       </div>
       <form onSubmit={handleSubmit}>
         <input style={{marginTop:30}} type="text" placeholder="username" ref={nameRef}/>

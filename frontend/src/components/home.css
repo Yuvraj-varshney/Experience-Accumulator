@@ -1,116 +1,128 @@
 .card{
-  width:200px;
-  height:300px;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
- 
-  
+    width:200px;
+    height:300px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+    
 }
 label{
-  width: max-content;
-  color: rgb(13, 185, 27);
-  font-size: 15px;
-  border-bottom-color: rgb(2, 104, 3);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  margin: 3px 0;  
+    width: max-content;
+    color: rgb(13, 185, 27);
+    font-size: 15px;
+    border-bottom-color: rgb(2, 104, 3);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin: 3px 0;  
 
 }
 .desc{
- font-size: 14px; 
+   font-size: 14px; 
 }
 .star{
-  color: gold;
+    color: gold;
 }
 .username{
-  font-size: 14px;
+    font-size: 14px;
 }
 .date{
-  font-size: 12px;
+    font-size: 12px;
 }
 form {
-  width: 200px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: rgb(88, 87, 87);
-}
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(88, 87, 87);
+  }
+  
+  input {
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 12px;
+    color: rgb(185, 184, 184);
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  textarea {
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .submitButton {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+  }
+  
+  .buttons,
+  .logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .button {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: rgb(232, 29, 29);
+    z-index: 4;
+  }
+  
+  .button:focus{
+    outline: none;
+    /* margin-left: 30px; */
+  }
+  
+  .logout{
+    background-color: red;
+    margin-top: 10px;
+    margin-right: 30px;
+  }
 
-input {
-  border: none;
-  border-bottom: 1px solid gray;
-}
+  .logout:hover{
+    transform: scale(1.2,1.2);
+  }
+  
+  .login{
+    background-color: rgb(0, 128, 15);
+    margin-top: 6px;
+    margin-right: 20px;
+  }
 
-input::placeholder,
-textarea::placeholder {
-  font-size: 12px;
-  color: rgb(185, 184, 184);
-}
+  .login:hover{
+    transform: scale(1.2,1.2);
+  }
+  
+  .register{
+    background-color: rgb(30, 57, 167);
+    margin-top: 10px;
+    margin-right: 30px;
+  }
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
-
-textarea {
-  border: none;
-  border-bottom: 1px solid gray;
-}
-
-.submitButton {
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  color: white;
-  background-color: tomato;
-  cursor: pointer;
-}
-
-.buttons,
-.logout {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.button {
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: rgb(232, 29, 29);
-  z-index: 4;
-}
-
-.button:focus{
-  outline: none;
-  /* margin-left: 30px; */
-}
-
-.logout{
-  background-color: red;
-  margin-top: 3px;
-  margin-right: 30px;
-}
-
-.login{
-  background-color: rgb(0, 128, 15);
-  margin-top: 3px;
-  margin-right: 20px;
-}
-
-.register{
-  background-color: rgb(30, 57, 167);
-  margin-top: 3px;
-  margin-right: 30px;
-}
+  .register:hover{
+    transform: scale(1.2,1.2);
+  }
 
 marker{
-stroke: #f8c102;
-transform: translate(-50%, -100%);
+  stroke: #f8c102;
+  transform: translate(-50%, -100%);
 }
